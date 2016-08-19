@@ -30,7 +30,7 @@ However i advise 110% to **never** user .innerHTML if your interacting with the 
 
 ## Guide: Lets begin
 ### Setting up the canvas!
-By canvas i am refering to an artist canvas and not a HTML5 canvas tag. So for this guide we will use a standard HTML5 page.
+By canvas i am refering to an artists canvas and not a HTML5 canvas tag. So for this guide we will use a standard HTML5 page.
 
 ```
 <!doctype html>
@@ -54,11 +54,11 @@ By canvas i am refering to an artist canvas and not a HTML5 canvas tag. So for t
 
 ```
 
-If you are familar with HTML you will notice i do not have any mobile META tags inside my HEAD. At this time i am not too fussed with a mobile experience, although it will work fine on most modern devices I feel it is out-of-scope for this small guide.
+If you are familar with HTML or responsive developement you will notice i do not have any mobile META tags inside my HEAD. At this time i am not too fussed with a mobile experience, although it will work fine on most modern devices I feel it is out-of-scope for this small guide.
 
 I have linked to our stylesheet which will be in **./css/** folder. called **styles.css**.
 
-The javascript will be inside my index.html page, but feel free to split it if you prefer. I am loading it at bottom of my document so it knows of all elements inside my page, it also performs visually better this way depending on the size / complexity of the script when it comes to loading the page initially.
+The javascript will be inside my index.html page itself at trhe bottom, but feel free to split it into it's own file if you prefer. I am loading it at bottom of my document so it knows of all elements inside my page, it also performs visually better this way depending on the size / complexity of the script when it comes to loading the page initially.
 
 ### Setting up the Stylesheet!
 
@@ -75,23 +75,23 @@ body {
 }
 ```
 
-Our basic stylesheet contains a basic CSS reset for the elements i plan to use for this guide. CSS resets is a common practice of changing the state we want our elements to have by default on our page. For example body usually contains paddings / margin values and i personally always remove those in my CSS.
+Our basic stylesheet contains a basic CSS reset for the elements i plan to use for this project. CSS resets is a common practice of changing the default state we want our elements to have on our page. For example BODY tags usually contain paddings / margin values and i personally always remove those in my CSS.
 
-Elemens have initial/default states that were practical when the web was first created, but in recent times many developers / designers have preferred different states. The web has come a long way in this regard (http://sixrevisions.com/css/should-you-reset-your-css/)
+Elements have initial/default states that were practical when the world wide web was first created, but in recent times many developers / designers have preferred different default states and the web has come a long way in this regard. Please refer a little to this article on CSS resets to build your own opinion (http://sixrevisions.com/css/should-you-reset-your-css/)
 
 ### Setting up the materials for animating!
 
-In this guide you will find 2 background images, 1 rain image and 1 lightning image. For this scene this is all we need and i will show you 3 methods of creating animations with these materials.
+In this repo you will find 2 background images, 1 rain image and 1 lightning image. For this project that is all we need and i will show you 3 methods of creating animations with these materials.
 
 You can optimize this by using sprite-maps and SVGs but for now we will stick to some basic formats. Optimization isn't a priority for me in this scene, it should be cool to look at, even if it's a little large to download initially.
 
-In this step i created my main background (scene) image, that is the main backdrop for my scene. I have a copy of this background but with some features highlighted (Fel lava, clouds etc). This copy we will animate in using Opacity to create glow effects.
+In this step i created my main background (scene) image, that is the main backdrop for my scene. I have a copy of this background but with some features highlighted (Fel lava, clouds etc). This background copy we will animate in using the Opacity property that css provides to create glow effects.
 
-The rain is an image with multiple rain drops with the desired blur affect already applied to them. We are going to use this image multiple times and have it animate at different start and end locations to simulate rain. As an extra bonus i also add in some easing, to show how you can simulate the rain landing on a surface like glass.  
+The rain is an image with multiple rain drops which already contain some desired blur effects already. We are going to use this image multiple times and have it animate at different start and end locations to simulate rain. As an extra bonus i also add in some easing, to show how you can simulate the rain landing on a surface like glass.  
 
 The lightning is one image which we will transform (flip), fade in and out (to flash) and adjust the dimensions so we can have multiple different lightning strikes while just using one image.
 
-### Create the basic scene
+### Lets create the basic foundation for our scene
 
 ```
 <body>
@@ -159,7 +159,7 @@ We have 1 layer for our main background, 1 layer for our rain and 1 layer for ou
 
 We now have our background animating in and out, i personally went for a 6 second repeating animation that changes the opacity at certain points. This is done to minick the fel glow from Warcraft.
 
-**NOTE:** We are currently animating a large amount of real-estate using 2 large images, this is one of the first performance hits we will see. What we could do is split this into slightly smaller animations and that may result in a smoother frame-rate for some low-performance devices.
+**NOTE:** We're currently animating a large amount of real-estate using 2 large images, this is one of the first performance hits we will see. What we could do is split this into slightly smaller animations and that may result in a smoother frame-rate for some low-performance devices.
 However this requires us to overlay a few more images and get there position perfect. Later on we do some responsive support so i went with one big image for this example.
 Depending on the graphic device and driver version, screen tearing and flickering happens with this approach.
 
@@ -387,7 +387,7 @@ The description should be short enough to keep people interested, but long enoug
 .footer_block a { display:block; text-align:right; padding:10px 100px 0 0; }
 ```
 
-The content is now positioned ontop of our container, we have different sections displaying different content. Added a featured video section and some generic copyright footer.
+The content is now positioned ontop of our scenes backdrop, we have different sections displaying different content. Added a featured video section and some generic copyright footer.
 
 ### Add our rain
 Saving the best part till last, let us now create some rain!
@@ -496,15 +496,15 @@ Saving the best part till last, let us now create some rain!
 .rain8 { animation-name: rain8; }
 ```
 
-So we now have a script that will generate the images for us, assign the delays to ensure they do not overlap and have the CSS assign the animation positions.
+So we now have a script that will generate the rain images for us, assign the delays to ensure they do not overlap and have the CSS assign the animation positions.
 
 Run this in the browser and you should have some nice rain affects going. Depending on the scene / materials you will certainly want to tweak the values.
 
 ### Ending
 In the repo you will find some extra CSS which is used for some extra styling and some added responsive features for the background.
 
-If you have any questions or concerns please feel free to contact me.
-Did i make any mistakes or wish to improve this guide, please feel free to send a pull request.
+If you have any questions or concerns? please feel free to contact me.
+Did i make any mistakes or wish to improve this guide? please feel free to send a pull request.
 
 I hope this helps or inspires in some way :D
 
