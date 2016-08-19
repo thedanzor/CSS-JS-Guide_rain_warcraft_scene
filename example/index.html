@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Background editor</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+  <div class="main_background">
+	<div class="inner_background">
+
+	</div>
+  </div>
+
+  <div class="rain_placeholder">
+	<img src="img/ligthning1.png" class="lightning" />
+	<img src="img/ligthning1.png" class="lightning2 delayed1" />
+
+  </div>
+
+  <div class="content_wrapper">
+	<div class="content_wrapper_inner">
+
+	  <h1 class="application_title"> Warcraft Raid Profile </h1>
+	  <div class="version_num"> v0.0.1 </div>
+	  <div class="username"> Username </div>
+
+	  <div class="videoHolder section_pad">
+		<div>
+		  <video width="100%" height="100%" autoplay muted loop>
+			<source src="video.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+	  </div>
+
+	  <div class="content_section section_pad">
+		<h3> About Username: </h3>
+		<p> Use this section to add a description about yourself; as a person and as a raider. Talk about your past experiences with raiding and what sort of role and utility you can bring to the raid.  <br /> <br />
+
+The description should be short enough to keep people interested, but long enough that you can tell as much needed information as possible for your application / profile. Feel free to add specific links to logs as well as talk about what sort of raiding envioment best suits you.  </p>
+	  </div>
+
+	  <div class="section_split"> </div>
+
+	  <div class="content_section section_pad">
+		<h3> Live Information: </h3>
+		<div class="item_level"> Ilvl 740 </div>
+
+		<div class="content_container">
+		  <div class="content_row"> <h4> The Nighthold: </h4> 13/13 Normal | 13/13 Heroic | 13/13 Mythic </div>
+		  <div class="content_row"> <h4> Emerald Nightmare: </h4> 13/13 Normal | 13/13 Heroic | 13/13 Mythic </div>
+		  <div class="content_row"> <h4> Hellfire Citadel: </h4> 13/13 Normal | 13/13 Heroic | 13/13 Mythic </div>
+		  <div class="content_row"> <h4> Blackrock Foundery: </h4> 13/13 Normal | 13/13 Heroic | 13/13 Mythic </div>
+		  <div class="content_row"> <h4> Highmaul: </h4> 13/13 Normal | 13/13 Heroic | 13/13 Mythic </div>
+		</div>
+
+	  </div>
+
+	  <div class="section_split"> </div>
+
+	  <div class="content_section footer_block">
+		World of Warcraft raid profile is currently a small beta application, Data displayed may be out-of-date and come from numerous sources.
+		<a href="#"> WoW Raid profile is made by Scott Jones and open sourced </a>
+	  </div>
+
+	</div>
+  </div>
+
+  <script>
+	// Get the container that we render our rain too
+	var rainholder = document.querySelector('.rain_placeholder');
+	var MAX_RAIN_LAYERS = 8;
+
+	// Generate a number of rain elements
+	// Change 8 to the number of rain layers you want.
+	//
+	// Each layer contains 8 rain images coming down at different locations (set in css) and follow a similar direction.
+	// With 8 rain layers we hope to create a consistant rain effect
+	//
+	// InnerHTML is a nasty way of rendering items, however i didn't feel like writing a create element method to
+	// create my rain images and assign the correct css classes to them. Then using appendChild to add them cleanly.
+	// I will try to add this at a later time :)
+	for (var i = 0; i < MAX_RAIN_LAYERS; i++) {
+	  rainholder.innerHTML += '<img src="img/rain.png" class="rain1 delayed' + i +'" />' +
+	  '<img src="img/rain.png" class="rain2 delayed' + i +'" />' +
+	  '<img src="img/rain.png" class="rain3 delayed' + i +'" />' +
+	  '<img src="img/rain.png" class="rain4 delayed' + i +'" />' +
+	  '<img src="img/rain.png" class="rain5 delayed' + i +'" />' +
+	  '<img src="img/rain.png" class="rain6 delayed' + i +'" />' +
+	  '<img src="img/rain.png" class="rain8 delayed' + i +'" />' +
+	  '<img src="img/rain.png" class="rain7 delayed' + i +'" />';
+	}
+  </script>
+
+</body>
+</html>
