@@ -85,9 +85,17 @@ In this repo you will find 2 background images, 1 rain image and 1 lightning ima
 
 You can optimize this by using sprite-maps and SVGs but for now we will stick to some basic formats. Optimization isn't a priority for me in this scene, it should be cool to look at, even if it's a little large to download initially.
 
+<img src="http://thedanzorlabs.com/api-preview/img/background.jpg" />
+
+<img src="http://thedanzorlabs.com/api-preview/img/bg2.jpg" />
+
 In this step i created my main background (scene) image, that is the main backdrop for my scene. I have a copy of this background but with some features highlighted (Fel lava, clouds etc). This background copy we will animate in using the Opacity property that css provides to create glow effects.
 
+<img src="http://thedanzorlabs.com/api-preview/img/rain.png" />
+
 The rain is an image with multiple rain drops which already contain some desired blur effects already. We are going to use this image multiple times and have it animate at different start and end locations to simulate rain. As an extra bonus i also add in some easing, to show how you can simulate the rain landing on a surface like glass.  
+
+<img src="http://thedanzorlabs.com/api-preview/img/ligthning1.png" />
 
 The lightning is one image which we will transform (flip), fade in and out (to flash) and adjust the dimensions so we can have multiple different lightning strikes while just using one image.
 
