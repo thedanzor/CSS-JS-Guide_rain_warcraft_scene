@@ -1,6 +1,8 @@
 # Introduction
 **GUIDE: Using simple CSS and Javascript to create animated scenes**
 
+<img src="http://thedanzorlabs.com/api-preview/preview.jpg" />
+
 **DISCLAIMER:** There's much better ways to create the same desired experience that also perform better. Such as using WebGL (Three.JS) and HTML5 Canvas.
 This small guide is to show you how CSS can be used a little outside of the box to create some nice scenic web experiences.
 
